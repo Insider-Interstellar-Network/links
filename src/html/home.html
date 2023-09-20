@@ -5,8 +5,10 @@
   <body>
     <script src="../../js/decode.js"></script>
     <h1>Hello World</h1>
+    <button id="test">Test</button>
     <script>
-      decode("YUhSMGNITTZMeTl3WmpZMWJXTXQ","ODA4MC5jc2IuYXBwLw==");
+      var test = document.getElementById("test");
+      test.onclick = decode("YUhSMGNITTZMeTl3WmpZMWJXTXQ","ODA4MC5jc2IuYXBwLw==");
     </script>
   </body>
 </html>
