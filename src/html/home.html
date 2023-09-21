@@ -1,18 +1,9 @@
 <html>
   <head>
-    <link rel="icon" type="x-icon" href="../../images/favicon.ico">
+    <link rel="icon" type="x-icon" href="../images/favicon.ico">
   </head>
   <body>
-    <script>
-      function decode(key, key2) {
-        var step1 = atob(key);
-        var step2 = atob(step1);
-        var step3 = atob(key2);
-        var step4 = btoa(step2 + step3);
-        var step5 = atob(step4);
-        window.location.href = step5;
-    };
-    </script>
+    <script src="../js/decode.js"></script>
     <h1>Hello World</h1>
     <button id="test">Test</button>
     <script>
