@@ -17,6 +17,7 @@ function setup() {
     var br = document.createElement("br");
     body.appendChild(br);
   })
+  div.remove();
 }
 function password(num) {
   var input = document.getElementById("passwordInput" + num);
