@@ -13,7 +13,7 @@ function setup() {
     p.innerHTML = key.num;
     var form = document.createElement("form");
     form.id = "passwordForm" + key.num;
-    form.onclick = "password(1);return false;";
+    form.onclick = "password(" + key.num + ");return false;";
     var input = document.createElement("input");
     input.id = "passwordInput" + key.num;
     input.class = "whiteRight";
