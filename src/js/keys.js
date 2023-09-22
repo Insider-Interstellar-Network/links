@@ -1,5 +1,6 @@
 const keys = [
   {password: "Wm1neE16QXlNVFU0TVE9PQ==", num : "1", key : "aHR0cHM6Ly92cjJ4NGstODA4MC5jc2IuYXBwLw=="},
+  {password: "Wm1neE16QXlNVFU0TVE9PQ==", num : "2", key : "aHR0cHM6Ly92cjJ4NGstODA4MC5jc2IuYXBwLw=="},
 ]
 function setup() {
   var div = document.getElementById("0");
