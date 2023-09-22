@@ -10,7 +10,7 @@ function password(num) {
     var step1 = atob(key.password);
     var step2 = atob(step1);
     if (step2 == input.value) {
-      localStorage.setItem("","true")
+      localStorage.setItem("showkey" + key.num,"true")
     }
   })
 }
