@@ -10,6 +10,9 @@ function setup() {
     clone.children[2].id = "passwordForm" + key.name;
     clone.shildren[2].onclick = "password(" + key.num + ");return false;";
     clone.children[2].children[1].id = "passwordInput" + key.num;
+    clone.children[2].children[1].class = "whiteRight";
+    clone.children[2].children[1].type = "password";
+    clone.children[2].children[1].style = "background-color:rgb(22,27,34); border-radius:15px;";
     body.appendChild(clone);
     var br = document.createElement("br");
     body.appendChild(br);
