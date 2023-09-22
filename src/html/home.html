@@ -6,6 +6,32 @@
   </head>
   <body style="background-color:black;">
     <script src="../js/decode.js"></script>
+    <script>
+      function setup() {
+  keys.forEach((key) => {
+    var br = document.createElement("by");
+    body.appendChild(br);
+    var div = document.createElement("div");
+    div.id = key.num;
+    var p = document.createElement("p");
+    p.id = "num" + key.num;
+    p.class = "whiteRight";
+    p.innerHTML = key.num;
+    var form = document.createElement("form");
+    form.id = "passwordForm" + key.num;
+    form.onclick = "password(1);return false;";
+    var input = document.createElement("input");
+    input.id = "passwordInput" + key.num;
+    input.class = "whiteRight";
+    input.type = "password";
+    input.style = "background-color:rgb(22,27,34); border-radius:15px;";
+    form.appendChild(input);
+    div.appendChild(p);
+    div.appendChild(form);
+    body.appendChild(div);
+  });
+}
+    </script>
     <h1 onload="setup()" style="font-size:40px;" class="whiteRight">Links</h1>
     <button style="display:none;" onclick="decode(1)">Test</button>
     <div id="1">
@@ -13,6 +39,6 @@
       <form id="passwordForm1" onclick="password(1);return false;">
         <input class="whiteRight" style="background-color:rgb(22,27,34); border-radius:15px;" id="passwordInput1" type="password">
       </form>
-    </div><br>
+    </div>
   </body>
 </html>
