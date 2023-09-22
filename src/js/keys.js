@@ -5,8 +5,13 @@ function setup() {
   
 }
 function password(num) {
+  var input = document.getElementById("passwordInput");
   keys.forEach((key) => {
-    
+    var step1 = atob(key.password);
+    var step2 = atob(step1);
+    if (step2 == input.value) {
+      localStorage.setItem("","true")
+    }
   })
 }
 function decode(num) {
