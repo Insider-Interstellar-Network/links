@@ -3,6 +3,8 @@ const keys = [
 ]
 function setup() {
   keys.forEach((key) => {
+    var br = document.createElement("by");
+    body.appendChild(br);
     var div = document.createElement("div");
     div.id = key.num;
     var p = document.createElement("p");
