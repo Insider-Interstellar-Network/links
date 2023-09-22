@@ -4,7 +4,15 @@ const keys = [
 function setup() {
   var div = document.getElementById("0");
   keys.forEach((key) => {
-    
+    var clone = div.cloneNode(true);
+    clone.id = key.num;
+    clone.children[1].id = "num" + key.num;
+    clone.children[3].id = "passwordForm" + key.name;
+    clone.shildren[3].onclick = "password(" + key.num + ");return false;";
+    clone.children[3].children[1].id = "passwordInput" + key.num;
+    body.appendChild(clone);
+    var br = document.createElement("br");
+    body.appendChild(br);
   })
 }
 function password(num) {
