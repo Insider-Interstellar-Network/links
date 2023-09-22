@@ -2,28 +2,23 @@ const keys = [
   {password: "Wm1neE16QXlNVFU0TVE9PQ==", num : "1", key : "aHR0cHM6Ly92cjJ4NGstODA4MC5jc2IuYXBwLw=="},
 ]
 function setup() {
+  var div = document.getElementById("0");
   keys.forEach((key) => {
-    var br = document.createElement("by");
+    var clone = div.cloneNode(true);
+    clone.id = key.num;
+    clone.children[1].id = "num" + key.num;
+    clone.children[1].class = "whiteRight";
+    clone.children[2].id = "passwordForm" + key.name;
+    clone.shildren[2].onclick = "password(" + key.num + ");return false;";
+    clone.children[2].children[1].id = "passwordInput" + key.num;
+    clone.children[2].children[1].class = "whiteRight";
+    clone.children[2].children[1].type = "password";
+    clone.children[2].children[1].style = "background-color:rgb(22,27,34); border-radius:15px;";
+    body.appendChild(clone);
+    var br = document.createElement("br");
     body.appendChild(br);
-    var div = document.createElement("div");
-    div.id = key.num;
-    var p = document.createElement("p");
-    p.id = "num" + key.num;
-    p.class = "whiteRight";
-    p.innerHTML = key.num;
-    var form = document.createElement("form");
-    form.id = "passwordForm" + key.num;
-    form.onclick = "password(" + key.num + ");return false;";
-    var input = document.createElement("input");
-    input.id = "passwordInput" + key.num;
-    input.class = "whiteRight";
-    input.type = "password";
-    input.style = "background-color:rgb(22,27,34); border-radius:15px;";
-    form.appendChild(input);
-    div.appendChild(p);
-    div.appendChild(form);
-    body.appendChild(div);
-  });
+  })
+  div.remove();
 }
 function password(num) {
   var input = document.getElementById("passwordInput" + num);
