@@ -7,9 +7,9 @@ function setup() {
     var clone = div.cloneNode(true);
     clone.id = key.num;
     clone.children[1].id = "num" + key.num;
-    clone.children[3].id = "passwordForm" + key.name;
-    clone.shildren[3].onclick = "password(" + key.num + ");return false;";
-    clone.children[3].children[1].id = "passwordInput" + key.num;
+    clone.children[2].id = "passwordForm" + key.name;
+    clone.shildren[2].onclick = "password(" + key.num + ");return false;";
+    clone.children[2].children[1].id = "passwordInput" + key.num;
     body.appendChild(clone);
     var br = document.createElement("br");
     body.appendChild(br);
